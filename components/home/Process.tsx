@@ -32,17 +32,17 @@ export function Process() {
                         {
                             num: "1",
                             title: "Farm Production",
-                            desc: "Planned organic production at farm level with consistent agronomic practices."
+                            desc: "Sustainable organic farming with consistent agronomic excellence."
                         },
                         {
                             num: "2",
                             title: "Quality Handling",
-                            desc: "Post-harvest handling focused on cleanliness, consistency, and purity."
+                            desc: "Rigorous post-harvest processing to ensure maximum purity."
                         },
                         {
                             num: "3",
-                            title: "Supply & Export",
-                            desc: "Structured buyer communication for volume, lead times, and logistics."
+                            title: "Global Export",
+                            desc: "Reliable logistics and bulk supply for international markets."
                         }
                     ].map((step, i) => (
                         <motion.div

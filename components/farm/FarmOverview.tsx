@@ -54,20 +54,64 @@ export function FarmOverview() {
                     </motion.div>
                 </motion.div>
 
-                <motion.div
-                    className="relative aspect-[4/3] bg-muted rounded-2xl overflow-hidden border shadow-lg"
-                    initial={{ opacity: 0, scale: 0.9, rotate: 2 }}
-                    whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                >
-                    <Image
-                        src="/20250830_135231.jpg"
-                        alt="Farm Overview - 200 Hectares in South Omo"
-                        fill
-                        className="object-cover"
-                    />
-                </motion.div>
+                <div className="grid grid-cols-2 gap-4">
+                    <motion.div
+                        className="relative aspect-square bg-muted rounded-2xl overflow-hidden border shadow-lg"
+                        initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                    >
+                        <Image
+                            src="/photo_1_2025-12-25_09-23-26.jpg"
+                            alt="Farm Land Overview"
+                            fill
+                            className="object-cover hover:scale-105 transition-transform duration-700"
+                        />
+                    </motion.div>
+                    <motion.div
+                        className="relative aspect-square bg-muted rounded-2xl overflow-hidden border shadow-lg mt-8"
+                        initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                    >
+                        <Image
+                            src="/photo_2_2025-12-25_09-23-26.jpg"
+                            alt="Farm Operations"
+                            fill
+                            className="object-cover hover:scale-105 transition-transform duration-700"
+                        />
+                    </motion.div>
+                    <motion.div
+                        className="relative aspect-square bg-muted rounded-2xl overflow-hidden border shadow-lg -mt-8"
+                        initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.6 }}
+                    >
+                        <Image
+                            src="/photo_4_2025-12-25_09-23-26.jpg"
+                            alt="Soil Preparation"
+                            fill
+                            className="object-cover hover:scale-105 transition-transform duration-700"
+                        />
+                    </motion.div>
+                    <motion.div
+                        className="relative aspect-square bg-muted rounded-2xl overflow-hidden border shadow-lg"
+                        initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.8 }}
+                    >
+                        <Image
+                            src="/20250830_135231.jpg"
+                            alt="South Omo Farm View"
+                            fill
+                            className="object-cover hover:scale-105 transition-transform duration-700"
+                        />
+                    </motion.div>
+                </div>
             </div>
         </section>
     )

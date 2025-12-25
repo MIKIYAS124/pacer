@@ -3,8 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, X } from "lucide-react"
-import { motion } from "framer-motion"
+import { motion, useScroll, useMotionValueEvent } from "framer-motion"
 
 import { cn } from "@/lib/utils"
 import {
@@ -14,7 +13,6 @@ import {
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-    navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { Button } from "@/components/ui/button"
 import {
@@ -57,28 +55,54 @@ const farmComponents: { title: string; href: string; description: string }[] = [
 
 export function Header() {
     const [isOpen, setIsOpen] = React.useState(false)
+    const [hidden, setHidden] = React.useState(false)
+    const { scrollY } = useScroll()
+
+    useMotionValueEvent(scrollY, "change", (latest) => {
+        const previous = scrollY.getPrevious() ?? 0
+        if (latest > previous && latest > 150) {
+            setHidden(true)
+        } else {
+            setHidden(false)
+        }
+    })
+
+    const navLinkClasses = "text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors px-4 py-2"
 
     return (
-        <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-            <div className="container flex h-16 items-center justify-between">
-                <div className="mr-8 hidden md:flex items-center">
-                    <Link href="/" className="mr-6 flex items-center space-x-2">
+        <motion.header
+            variants={{
+                visible: { y: 0 },
+                hidden: { y: "-100%" },
+            }}
+            animate={hidden ? "hidden" : "visible"}
+            transition={{ duration: 0.35, ease: "easeInOut" }}
+            className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60"
+        >
+            <div className="container flex h-20 items-center justify-between">
+                {/* Logo - Left */}
+                <div className="flex-shrink-0">
+                    <Link href="/" className="flex items-center space-x-2">
                         <Image src="/logo.png" alt="Pacer Field Logo" width={48} height={48} className="h-12 w-auto" />
-                        <span className="hidden font-bold sm:inline-block text-lg">
+                        <span className="hidden font-black sm:inline-block text-xl tracking-tighter uppercase whitespace-nowrap">
                             Pacer Field
                         </span>
                     </Link>
+                </div>
+
+                {/* Navigation - Centered Desktop */}
+                <div className="hidden md:flex flex-1 justify-center">
                     <NavigationMenu>
-                        <NavigationMenuList>
+                        <NavigationMenuList className="gap-2">
                             <NavigationMenuItem>
-                                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                                    <Link href="/">
+                                <NavigationMenuLink asChild>
+                                    <Link href="/" className={navLinkClasses}>
                                         Home
                                     </Link>
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <NavigationMenuTrigger>Products</NavigationMenuTrigger>
+                                <NavigationMenuTrigger className={cn(navLinkClasses, "bg-transparent hover:bg-transparent data-[state=open]:bg-transparent")}>Products</NavigationMenuTrigger>
                                 <NavigationMenuContent>
                                     <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                                         <li className="row-span-3">
@@ -118,7 +142,7 @@ export function Header() {
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <NavigationMenuTrigger>Farm & Traceability</NavigationMenuTrigger>
+                                <NavigationMenuTrigger className={cn(navLinkClasses, "bg-transparent hover:bg-transparent data-[state=open]:bg-transparent")}>Farm</NavigationMenuTrigger>
                                 <NavigationMenuContent>
                                     <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                                         {farmComponents.map((component) => (
@@ -134,29 +158,29 @@ export function Header() {
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                                    <Link href="/quality">
+                                <NavigationMenuLink asChild>
+                                    <Link href="/quality" className={navLinkClasses}>
                                         Quality
                                     </Link>
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                                    <Link href="/export">
+                                <NavigationMenuLink asChild>
+                                    <Link href="/export" className={navLinkClasses}>
                                         Export
                                     </Link>
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                                    <Link href="/about">
+                                <NavigationMenuLink asChild>
+                                    <Link href="/about" className={navLinkClasses}>
                                         About
                                     </Link>
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                                    <Link href="/contact">
+                                <NavigationMenuLink asChild>
+                                    <Link href="/contact" className={navLinkClasses}>
                                         Contact
                                     </Link>
                                 </NavigationMenuLink>
@@ -165,14 +189,8 @@ export function Header() {
                     </NavigationMenu>
                 </div>
 
-                {/* Mobile Menu */}
-                <div className="flex flex-1 items-center justify-between md:hidden">
-                    <Link href="/" className="mr-6 flex items-center space-x-2">
-                        <Image src="/logo.png" alt="Pacer Field Logo" width={40} height={40} className="h-10 w-auto" />
-                        <span className="font-bold inline-block text-lg">
-                            Pacer Field
-                        </span>
-                    </Link>
+                {/* Mobile Menu Trigger & Spacer for Desktop */}
+                <div className="flex md:hidden">
                     <Sheet open={isOpen} onOpenChange={setIsOpen}>
                         <SheetTrigger asChild>
                             <Button variant="ghost" size="icon" className="px-0 w-10 h-10 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden z-50 relative">
@@ -224,7 +242,7 @@ export function Header() {
                                             <MobileLink
                                                 href={item.href}
                                                 onOpenChange={setIsOpen}
-                                                className="block py-4 text-lg font-medium border-b border-border/50 hover:text-primary transition-colors"
+                                                className="block py-4 text-lg font-bold border-b border-border/50 hover:text-primary transition-colors uppercase tracking-widest"
                                             >
                                                 {item.label}
                                             </MobileLink>
@@ -238,12 +256,7 @@ export function Header() {
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.5 }}
                                 >
-                                    <Button asChild className="w-full text-lg h-12" size="lg">
-                                        <Link href="/contact" onClick={() => setIsOpen(false)}>
-                                            Request Quote
-                                        </Link>
-                                    </Button>
-                                    <p className="text-center text-sm text-muted-foreground mt-6">
+                                    <p className="text-center text-xs text-muted-foreground mt-6 uppercase tracking-widest">
                                         &copy; {new Date().getFullYear()} Pacer Field Plc.
                                     </p>
                                 </motion.div>
@@ -252,13 +265,10 @@ export function Header() {
                     </Sheet>
                 </div>
 
-                <div className="hidden md:flex items-center space-x-2">
-                    <Button asChild >
-                        <Link href="/contact">Request Quote</Link>
-                    </Button>
-                </div>
+                {/* Desktop Placeholder for Right balance */}
+                <div className="hidden md:block w-[48px]" />
             </div>
-        </header>
+        </motion.header>
     )
 }
 
@@ -277,7 +287,7 @@ const ListItem = React.forwardRef<
                     )}
                     {...props}
                 >
-                    <div className="text-sm font-medium leading-none">{title}</div>
+                    <div className="text-sm font-bold leading-none uppercase tracking-wider">{title}</div>
                     <p className="line-clamp-2 text-sm leading-snug text-muted-foreground group-hover:text-accent-foreground/90 transition-colors">
                         {children}
                     </p>

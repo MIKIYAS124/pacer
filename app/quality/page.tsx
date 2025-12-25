@@ -2,6 +2,7 @@
 
 import { CheckCircle2 } from "lucide-react"
 import { motion } from "framer-motion"
+import Image from "next/image"
 
 export default function QualityPage() {
     return (
@@ -26,22 +27,33 @@ export default function QualityPage() {
                     transition={{ delay: 0.2, duration: 0.6 }}
                 >
                     <h2 className="text-2xl font-semibold">Quality Workflow</h2>
-                    <div className="grid gap-6 md:grid-cols-3">
+                    <div className="grid md:grid-cols-3 gap-8">
                         {[
-                            { id: "01", title: "Handling Discipline", desc: "Clean, careful handling to maintain consistency." },
-                            { id: "02", title: "Sorting & Cleaning", desc: "Operational steps to reduce foreign matter to < 0.1%." },
-                            { id: "03", title: "Batch Consistency", desc: "Repeatable processes and internal checks for every shipment." }
-                        ].map((item, i) => (
+                            { title: "Careful Handling", desc: "Organic integrity maintained from the farm gate.", img: "/photo_1_2025-12-25_09-23-05.jpg" },
+                            { title: "Vibro-Cleaning", desc: "Multi-stage process to ensure 99.9% purity.", img: "/photo_2_2025-12-25_09-23-05.jpg" },
+                            { title: "Batch Consistency", desc: "Rigorous testing of every export lot.", img: "/photo_3_2025-12-25_09-23-26.jpg" }
+                        ].map((step, i) => (
                             <motion.div
                                 key={i}
-                                className="border p-6 rounded-lg bg-card hover:shadow-md transition-shadow"
+                                className="p-0 rounded-2xl border bg-card overflow-hidden shadow-sm hover:shadow-md transition-shadow group"
                                 initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.3 + (i * 0.15), duration: 0.5 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: i * 0.1 }}
                             >
-                                <div className="h-10 w-10 text-primary font-bold text-2xl mb-2">{item.id}</div>
-                                <h3 className="font-semibold mb-2">{item.title}</h3>
-                                <p className="text-sm text-muted-foreground">{item.desc}</p>
+                                <div className="relative h-48 w-full">
+                                    <Image
+                                        src={step.img}
+                                        alt={step.title}
+                                        fill
+                                        className="object-cover transition-transform group-hover:scale-105"
+                                    />
+                                </div>
+                                <div className="p-6">
+                                    <CheckCircle2 className="h-8 w-8 text-primary mb-4" />
+                                    <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+                                    <p className="text-sm text-muted-foreground">{step.desc}</p>
+                                </div>
                             </motion.div>
                         ))}
                     </div>

@@ -1,33 +1,23 @@
 "use client"
 
-import { Target, TrendingUp, DollarSign, Users, Award } from "lucide-react"
+import { Target, TrendingUp, Award } from "lucide-react"
 import { motion } from "framer-motion"
 
 const objectives = [
     {
         icon: Target,
-        title: "Bulk Production",
-        description: "Bulk production of organic chia seeds for world and local markets."
+        title: "Global Supply",
+        description: "Bulk production of organic certified chia seeds for world and local export markets."
     },
     {
         icon: TrendingUp,
-        title: "Socio-Economic Support",
-        description: "Support national socio-economic development programs."
-    },
-    {
-        icon: DollarSign,
-        title: "Foreign Exchange",
-        description: "Contribute to Ethiopia’s foreign exchange generation."
-    },
-    {
-        icon: Users,
-        title: "Job Creation",
-        description: "Contribute to job creation across farming and logistics."
+        title: "National Development",
+        description: "Driving Ethiopia’s growth through foreign exchange generation and sustainable job creation."
     },
     {
         icon: Award,
-        title: "Quality & Productivity",
-        description: "Increase quality and productivity for world market standards."
+        title: "Uncompromising Quality",
+        description: "Maintaining strict organic standards and 99.9% purity to meet global expectations."
     }
 ]
 
@@ -35,54 +25,36 @@ export function Objectives() {
     return (
         <section className="container py-16 md:py-24">
             <motion.div
-                className="text-center mb-12"
+                className="text-center mb-16"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.6 }}
             >
-                <h2 className="text-3xl font-bold tracking-tight mb-4">Our Objectives</h2>
-                <p className="text-muted-foreground max-w-2xl mx-auto">
-                    Driven by a commitment to sustainable development and agricultural excellence.
-                </p>
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">Core Objectives</h2>
+                <div className="h-1.5 w-20 bg-primary mx-auto rounded-full" />
             </motion.div>
-            <motion.div
-                className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-50px" }}
-                variants={{
-                    hidden: { opacity: 0 },
-                    visible: {
-                        opacity: 1,
-                        transition: {
-                            staggerChildren: 0.1
-                        }
-                    }
-                }}
-            >
+
+            <div className="grid md:grid-cols-3 gap-10">
                 {objectives.map((obj, i) => (
                     <motion.div
                         key={i}
-                        className="flex gap-4 p-6 rounded-xl border bg-card text-card-foreground shadow-sm hover:shadow-md transition-shadow"
-                        variants={{
-                            hidden: { opacity: 0, y: 20 },
-                            visible: { opacity: 1, y: 0 }
-                        }}
-                        whileHover={{ scale: 1.02 }}
+                        className="flex flex-col items-center text-center space-y-4 p-6"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: i * 0.1, duration: 0.5 }}
                     >
-                        <div className="flex-shrink-0">
-                            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                                <obj.icon className="h-6 w-6" />
-                            </div>
+                        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/5 text-primary rotate-3 transition-transform hover:rotate-0">
+                            <obj.icon className="h-8 w-8" />
                         </div>
-                        <div>
-                            <h3 className="font-semibold mb-2">{obj.title}</h3>
-                            <p className="text-sm text-muted-foreground">{obj.description}</p>
-                        </div>
+                        <h3 className="text-xl font-bold">{obj.title}</h3>
+                        <p className="text-muted-foreground leading-relaxed">
+                            {obj.description}
+                        </p>
                     </motion.div>
                 ))}
-            </motion.div>
+            </div>
         </section>
     )
 }
