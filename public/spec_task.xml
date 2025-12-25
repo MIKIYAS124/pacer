@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProjectProfile xmlns="https://pacerfield.example/schema/project-profile/v1"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="https://pacerfield.example/schema/project-profile/v1 project-profile-v1.xsd">
+
+  <ProjectId>PACERFIELD-CHIA-EXPORT-ET-001</ProjectId>
+  <ProjectName>Pacer Field Plc — Organic Chia Seed Production &amp; Supply</ProjectName>
+  <Country>Ethiopia</Country>
+  <Sector>Agriculture</Sector>
+  <SubSector>Oilseed / Export Crop</SubSector>
+
+  <Organization>
+    <LegalName>Pacer Field plc</LegalName>
+    <Role>Investor / Producer / Supplier</Role>
+    <Description>
+      Development partner committed to contributing to Ethiopia’s socio-economic development by investing in
+      production and supply of highly valuable agricultural products mainly intended for export markets and
+      to some extent for local supply.
+    </Description>
+  </Organization>
+
+  <Background>
+    <Narrative>
+      Ethiopia is highly endowed with natural resources. Despite this, the country historically faced economic
+      constraints; however, it has recently been among the fast-growing economies globally. The economy is
+      mainly based on agriculture, alongside observable industrial development. The national strategy recognizes
+      the complementarity between agriculture and industry, aligned with an Agriculture-Led Industry policy.
+      Industrial development is expected to take a leading position in the near future, while agriculture remains
+      a main source of raw materials for industry.
+
+      Industrial parks and other economic firms depend on agriculture for raw materials and foreign currency
+      supply. Therefore, strengthening agricultural capacity is essential for sustainable socio-economic development.
+      The government gives strong attention to agriculture and applies incentive systems to committed investors.
+
+      Pacer Field plc invests in organic chia seed production primarily for export markets, contributing to foreign
+      currency generation, job creation, and improved quality and productivity of agricultural products for world markets.
+    </Narrative>
+    <StrategicContext>
+      <PolicyAlignment>Agriculture-Led Industry policy</PolicyAlignment>
+      <Rationale>Foreign currency generation, raw material supply to industry, and sustainable socio-economic growth</Rationale>
+    </StrategicContext>
+  </Background>
+
+  <Products>
+    <Product>
+      <Name>Chia Seed</Name>
+      <Type>Organic</Type>
+      <PrimaryUse>Export</PrimaryUse>
+      <SecondaryUse>Local supply</SecondaryUse>
+    </Product>
+  </Products>
+
+  <Objectives>
+    <Objective id="OBJ-01">
+      <Title>Bulk production of organic chia seeds</Title>
+      <Details>Bulk production of organic chia seeds for world market and local market.</Details>
+    </Objective>
+    <Objective id="OBJ-02">
+      <Title>Support national socio-economic development programs</Title>
+      <Details>Support national socio-economic development programs through agricultural investment and value creation.</Details>
+    </Objective>
+    <Objective id="OBJ-03">
+      <Title>Contribute to foreign exchange generation</Title>
+      <Details>Contribution to the country's foreign exchange generation through export of organic chia seeds.</Details>
+    </Objective>
+    <Objective id="OBJ-04">
+      <Title>Job creation</Title>
+      <Details>Contribute to job creation across farming operations, handling, logistics, and support services.</Details>
+    </Objective>
+    <Objective id="OBJ-05">
+      <Title>Increase quality and productivity</Title>
+      <Details>Increase quality and productivity of agricultural products for world market standards.</Details>
+    </Objective>
+  </Objectives>
+
+  <Farm>
+    <FarmArea unit="hectare">200</FarmArea>
+    <FarmingModel>Organic farm</FarmingModel>
+    <Geography>
+      <Region>South West Ethiopia</Region>
+      <Zone>South Omo Zone</Zone>
+      <WoredaOrLocality>Menite Goldiya</WoredaOrLocality>
+      <Notes>Project location provided as: South West Ethiopia, South Omo Zone, Menite Goldiya.</Notes>
+    </Geography>
+  </Farm>
+
+  <Markets>
+    <PrimaryMarket>World / Export market</PrimaryMarket>
+    <SecondaryMarket>Local market</SecondaryMarket>
+  </Markets>
+
+  <ExpectedContributions>
+    <Contribution>
+      <Type>ForeignCurrency</Type>
+      <Description>Avail foreign currency through export sales of organic chia seed.</Description>
+    </Contribution>
+    <Contribution>
+      <Type>Employment</Type>
+      <Description>Create jobs in production, processing readiness, and supply chain operations.</Description>
+    </Contribution>
+    <Contribution>
+      <Type>QualityAndProductivity</Type>
+      <Description>Improve quality systems and productivity to meet world market requirements.</Description>
+    </Contribution>
+    <Contribution>
+      <Type>NationalDevelopment</Type>
+      <Description>Support national socio-economic development programs aligned with agriculture-led industrialization.</Description>
+    </Contribution>
+  </ExpectedContributions>
+
+  <KeyPerformanceIndicators>
+    <KPI id="KPI-01">
+      <Name>Annual production volume</Name>
+      <Unit>metric_ton</Unit>
+      <TargetTBD>true</TargetTBD>
+    </KPI>
+    <KPI id="KPI-02">
+      <Name>Export volume</Name>
+      <Unit>metric_ton</Unit>
+      <TargetTBD>true</TargetTBD>
+    </KPI>
+    <KPI id="KPI-03">
+      <Name>Foreign currency generated</Name>
+      <Unit>USD</Unit>
+      <TargetTBD>true</TargetTBD>
+    </KPI>
+    <KPI id="KPI-04">
+      <Name>Jobs created</Name>
+      <Unit>count</Unit>
+      <TargetTBD>true</TargetTBD>
+    </KPI>
+    <KPI id="KPI-05">
+      <Name>Organic compliance status</Name>
+      <Unit>status</Unit>
+      <TargetTBD>true</TargetTBD>
+    </KPI>
+  </KeyPerformanceIndicators>
+
+  <DocumentControl>
+    <Version>1.0</Version>
+    <PreparedDate>2025-12-24</PreparedDate>
+    <PreparedBy>ChatGPT</PreparedBy>
+    <Notes>
+      Targets, certification details, timelines, budgets, and operational plans can be appended once confirmed.
+    </Notes>
+  </DocumentControl>
+
+</ProjectProfile>
+<?xml version="1.0" encoding="UTF-8"?>
+<ProjectWebsiteSpec xmlns="https://pacerfield.example/schema/website-spec/v1"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="https://pacerfield.example/schema/website-spec/v1 website-spec-v1.xsd">
+
+  <Meta>
+    <ProjectName>Pacer Field Plc Website</ProjectName>
+    <SpecVersion>1.0</SpecVersion>
+    <Language>en</Language>
+    <Timezone>Europe/Amsterdam</Timezone>
+    <Notes>
+      Certificates and any download buttons/links are intentionally excluded per requirement.
+      This XML defines the website information architecture, UI/UX system, and interaction patterns.
+    </Notes>
+  </Meta>
+
+  <Branding>
+    <Colors>
+      <Primary name="Deep Indigo / Blue-Violet" hex="#5B5AA6" rgb="91,90,166" hsl="241,32%,50%"/>
+      <Accent name="Muted Indigo (Edge Tone)" hex="#51508F" rgb="81,80,143" hsl="241,28%,44%"/>
+      <Background name="Pure White" hex="#FFFFFF" rgb="255,255,255" hsl="0,0%,100%"/>
+      <Grayscale>
+        <DarkGray hex="#2E2E2E"/>
+        <LightGray hex="#F5F5F5"/>
+      </Grayscale>
+    </Colors>
+
+    <IntegrityRules>
+      <Rule id="BR-01">Do not introduce gradients inside the logo itself.</Rule>
+      <Rule id="BR-02">Use flat color for the logo mark; gradients are allowed only in backgrounds and 3D scenes.</Rule>
+      <Rule id="BR-03">Maintain high contrast and legibility (primary on white, or white on primary).</Rule>
+    </IntegrityRules>
+
+    <Typography>
+      <PrimaryFont>Inter</PrimaryFont>
+      <Fallbacks>system-ui, -apple-system, Segoe UI, Roboto, Arial</Fallbacks>
+      <Scale>
+        <H1>clamp(2.2rem, 3.5vw, 3.2rem)</H1>
+        <H2>clamp(1.6rem, 2.4vw, 2.2rem)</H2>
+        <Body>1rem</Body>
+        <Small>0.875rem</Small>
+      </Scale>
+    </Typography>
+
+    <UIVariables>
+      <CSSVar name="--brand-primary" value="#5B5AA6"/>
+      <CSSVar name="--brand-primary-dark" value="#51508F"/>
+      <CSSVar name="--brand-bg" value="#FFFFFF"/>
+      <CSSVar name="--text-main" value="#111111"/>
+      <CSSVar name="--text-muted" value="#4B5563"/>
+      <CSSVar name="--border" value="#E5E7EB"/>
+    </UIVariables>
+  </Branding>
+
+  <Stack>
+    <Frontend>
+      <Framework>Next.js</Framework>
+      <Rendering>App Router (SSR + SSG hybrid)</Rendering>
+      <Styling>Tailwind CSS</Styling>
+      <ComponentSystem>shadcn/ui</ComponentSystem>
+      <Animation>Framer Motion</Animation>
+      <3D>Three.js / WebGL (selective, performance-budgeted)</3D>
+    </Frontend>
+  </Stack>
+
+  <UXPrinciples>
+    <Principle id="UX-01">Trust-first information architecture for B2B agricultural export buyers.</Principle>
+    <Principle id="UX-02">3D is used only when it improves understanding (product + traceability), not decoration.</Principle>
+    <Principle id="UX-03">Fast first paint: progressive enhancement for all animations and WebGL.</Principle>
+    <Principle id="UX-04">Clear conversion path: Request Quote visible and repeated across pages.</Principle>
+  </UXPrinciples>
+
+  <Navigation>
+    <Header>
+      <Type>Sticky header</Type>
+      <Desktop>
+        <Pattern>MegaMenu with preview panel</Pattern>
+        <HoverEffect>Sliding underline (accent color)</HoverEffect>
+        <ActiveState>Section/page highlight</ActiveState>
+      </Desktop>
+      <Mobile>
+        <Pattern>Sheet / Drawer navigation</Pattern>
+        <QuickActions>
+          <Action>Request Quote</Action>
+          <Action>WhatsApp</Action>
+        </QuickActions>
+      </Mobile>
+    </Header>
+
+    <PrimaryMenu>
+      <Item id="NAV-01" label="Home" href="/"/>
+      <Item id="NAV-02" label="Products" href="/products">
+        <Children>
+          <Child label="Organic Chia Seed" href="/products/organic-chia-seed"/>
+          <Child label="Specs &amp; Grades" href="/products/specs-and-grades"/>
+          <Child label="Packaging Options" href="/products/packaging"/>
+        </Children>
+      </Item>
+      <Item id="NAV-03" label="Farm &amp; Traceability" href="/farm-traceability">
+        <Children>
+          <Child label="Farm Overview" href="/farm-traceability/farm-overview"/>
+          <Child label="Location" href="/farm-traceability/location"/>
+          <Child label="Traceability Flow" href="/farm-traceability/traceability-flow"/>
+        </Children>
+      </Item>
+      <Item id="NAV-04" label="Quality" href="/quality"/>
+      <Item id="NAV-05" label="Export" href="/export"/>
+      <Item id="NAV-06" label="About" href="/about"/>
+      <Item id="NAV-07" label="Contact" href="/contact"/>
+    </PrimaryMenu>
+  </Navigation>
+
+  <Pages>
+    <Page id="PAGE-HOME" route="/" name="Home">
+      <Hero>
+        <Layout>Split</Layout>
+        <Headline>Organic Chia Seed from Ethiopia — Export &amp; Local Supply</Headline>
+        <Subheadline>200-hectare farm in South West Ethiopia (South Omo Zone, Menite Goldiya).</Subheadline>
+        <KeyBullets>
+          <Bullet>Bulk organic chia seed production</Bullet>
+          <Bullet>Traceability-first operations</Bullet>
+          <Bullet>Supports foreign exchange generation and job creation</Bullet>
+        </KeyBullets>
+        <PrimaryCTA>Request Quote</PrimaryCTA>
+        <SecondaryCTA>Contact</SecondaryCTA>
+        <Visual>
+          <Mode>3D Optional</Mode>
+          <Description>Minimal 3D chia seed macro or bag mockup; lightweight canvas with fallback image.</Description>
+        </Visual>
+      </Hero>
+
+      <Sections>
+        <Section id="HOME-01" name="At a Glance" layout="Cards">
+          <Card title="Farm Area" value="200 hectares"/>
+          <Card title="Product" value="Organic Chia Seed"/>
+          <Card title="Markets" value="World export + local supply"/>
+          <Card title="Location" value="South Omo Zone, Menite Goldiya"/>
+        </Section>
+
+        <Section id="HOME-02" name="Objectives" layout="IconList">
+          <Item>Bulk production of organic chia seeds for world and local markets</Item>
+          <Item>Support national socio-economic development programs</Item>
+          <Item>Contribute to Ethiopia’s foreign exchange generation</Item>
+          <Item>Contribute to job creation</Item>
+          <Item>Increase quality and productivity for world market standards</Item>
+        </Section>
+
+        <Section id="HOME-03" name="How We Work" layout="Steps">
+          <Step order="1" title="Farm Production">Planned organic production at farm level with consistent agronomic practices.</Step>
+          <Step order="2" title="Quality Handling">Post-harvest handling focused on cleanliness and consistency.</Step>
+          <Step order="3" title="Supply &amp; Export Readiness">Structured buyer communication for volume, lead times, and logistics.</Step>
+        </Section>
+
+        <Section id="HOME-04" name="Trust Signals (No Certificates)" layout="InfiniteCarousel">
+          <Carousel type="infinite" speed="slow" pauseOnHover="true">
+            <Slide>Traceability-focused operations</Slide>
+            <Slide>Clear export communication (MOQ, lead time, Incoterms)</Slide>
+            <Slide>Consistent packaging options</Slide>
+            <Slide>Buyer-first responsiveness</Slide>
+            <Slide>Stable supply planning</Slide>
+          </Carousel>
+        </Section>
+      </Sections>
+    </Page>
+
+    <Page id="PAGE-PRODUCT" route="/products/organic-chia-seed" name="Organic Chia Seed">
+      <Layout>Content + Sticky Quote Panel (Desktop)</Layout>
+      <Content>
+        <Intro>
+          <Title>Organic Chia Seed</Title>
+          <Lead>
+            Pacer Field Plc produces and supplies organic chia seed primarily for export markets and also for local supply.
+          </Lead>
+        </Intro>
+
+        <Tabs default="Overview">
+          <Tab name="Overview">
+            <Block>Product summary, intended markets, and supply capabilities.</Block>
+          </Tab>
+          <Tab name="Specs">
+            <Block>Present specs as HTML tables (moisture, purity, foreign matter, etc.) without any download links.</Block>
+          </Tab>
+          <Tab name="Packaging">
+            <Block>Packaging options, labeling approach, palletization notes (if applicable).</Block>
+          </Tab>
+          <Tab name="FAQ">
+            <Accordion>
+              <Item question="What is your typical MOQ?">Provide MOQ based on operations (to be filled).</Item>
+              <Item question="What is your lead time?">Provide lead time ranges (to be filled).</Item>
+              <Item question="Do you supply local market too?">Yes, to some extent alongside export focus.</Item>
+            </Accordion>
+          </Tab>
+        </Tabs>
+      </Content>
+
+      <StickyPanel>
+        <Title>Request a Quote</Title>
+        <Fields>
+          <Field name="CompanyName" required="true"/>
+          <Field name="ContactPerson" required="true"/>
+          <Field name="Email" required="true"/>
+          <Field name="Phone" required="false"/>
+          <Field name="Country" required="true"/>
+          <Field name="QuantityRequested" required="true"/>
+          <Field name="PreferredIncoterm" required="false"/>
+          <Field name="Message" required="false"/>
+        </Fields>
+        <Submit>Send Inquiry</Submit>
+      </StickyPanel>
+    </Page>
+
+    <Page id="PAGE-FARM" route="/farm-traceability" name="Farm &amp; Traceability">
+      <Hero>
+        <Headline>Farm &amp; Traceability</Headline>
+        <Subheadline>200 hectares — South Omo Zone, Menite Goldiya (South West Ethiopia).</Subheadline>
+      </Hero>
+
+      <Sections>
+        <Section id="FARM-01" name="Farm Overview" layout="TwoColumn">
+          <Left>
+            <Text>Overview of farm scale, farming model (organic), and seasonal planning.</Text>
+          </Left>
+          <Right>
+            <Visual mode="2DMapPrimary">
+              <Description>2D map and location highlights; optional 3D toggle for desktop only.</Description>
+            </Visual>
+          </Right>
+        </Section>
+
+        <Section id="FARM-02" name="Traceability Flow" layout="Timeline">
+          <Step order="1" title="Farm Production">Production planning and farm-level operations.</Step>
+          <Step order="2" title="Post-harvest Handling">Cleaning/handling processes described transparently.</Step>
+          <Step order="3" title="Bagging &amp; Storage">Packaging and storage approach for shipment readiness.</Step>
+          <Step order="4" title="Delivery &amp; Export Logistics">Coordination for shipment and buyer communication.</Step>
+        </Section>
+
+        <Section id="FARM-03" name="Interactive Diagram" layout="WebGLSelective">
+          <PerformanceBudget>
+            <MaxJSKB>250</MaxJSKB>
+            <MaxGPUTimeMS>10</MaxGPUTimeMS>
+            <MobileFallback>true</MobileFallback>
+          </PerformanceBudget>
+          <Description>
+            Optional WebGL diagram that visualizes the traceability steps as a guided path; defaults to HTML timeline on mobile.
+          </Description>
+        </Section>
+      </Sections>
+    </Page>
+
+    <Page id="PAGE-QUALITY" route="/quality" name="Quality">
+      <Hero>
+        <Headline>Quality Approach</Headline>
+        <Subheadline>Quality handling designed for consistent world-market expectations.</Subheadline>
+      </Hero>
+      <Sections>
+        <Section id="QUAL-01" name="Quality Workflow" layout="Steps">
+          <Step order="1" title="Handling Discipline">Clean, careful handling to maintain consistency.</Step>
+          <Step order="2" title="Sorting &amp; Cleaning">Operational steps to reduce foreign matter (details to be filled).</Step>
+          <Step order="3" title="Batch Consistency">Repeatable processes and internal checks (details to be filled).</Step>
+        </Section>
+
+        <Section id="QUAL-02" name="Specs Presentation" layout="Table">
+          <Note>
+            Display technical specifications as web tables. No certificate section and no download buttons.
+          </Note>
+        </Section>
+      </Sections>
+    </Page>
+
+    <Page id="PAGE-EXPORT" route="/export" name="Export">
+      <Hero>
+        <Headline>Export</Headline>
+        <Subheadline>Clear process, clear communication, and buyer-ready coordination.</Subheadline>
+      </Hero>
+
+      <Sections>
+        <Section id="EXP-01" name="Export Readiness" layout="Cards">
+          <Card title="Incoterms" value="To be specified (EXW / FOB / CIF etc.)"/>
+          <Card title="Lead Time" value="To be specified"/>
+          <Card title="MOQ" value="To be specified"/>
+          <Card title="Documentation" value="Proforma invoice, packing list, etc. (as applicable)"/>
+        </Section>
+
+        <Section id="EXP-02" name="Process" layout="Steps">
+          <Step order="1" title="Inquiry">Buyer shares quantity, destination, timing.</Step>
+          <Step order="2" title="Quotation">Seller provides price and terms.</Step>
+          <Step order="3" title="Preparation">Batch preparation and packaging.</Step>
+          <Step order="4" title="Shipment Coordination">Logistics alignment and dispatch.</Step>
+        </Section>
+      </Sections>
+    </Page>
+
+    <Page id="PAGE-ABOUT" route="/about" name="About">
+      <Hero>
+        <Headline>About Pacer Field Plc</Headline>
+        <Subheadline>Committed to export-focused agricultural production supporting Ethiopia’s development.</Subheadline>
+      </Hero>
+
+      <Sections>
+        <Section id="ABOUT-01" name="Background" layout="LongFormText">
+          <Content>
+            Ethiopia’s economy is mainly based on agriculture with growing industrial development. The national strategy
+            recognizes agriculture and industry as complementary. Industrial development is expected to take the leading
+            position in the near future, while agriculture remains a key source of raw materials and foreign currency supply.
+            Pacer Field Plc contributes by investing in organic chia seed production for export and local markets.
+          </Content>
+        </Section>
+
+        <Section id="ABOUT-02" name="Objectives" layout="List">
+          <Item>Bulk production of organic chia seeds for world market and local market</Item>
+          <Item>Support national socio-economic development programs</Item>
+          <Item>Contribution to the country's foreign exchange generation</Item>
+          <Item>Contributes to job creation</Item>
+          <Item>Increasing quality and productivity of agricultural products for world market</Item>
+        </Section>
+      </Sections>
+    </Page>
+
+    <Page id="PAGE-CONTACT" route="/contact" name="Contact">
+      <Hero>
+        <Headline>Contact</Headline>
+        <Subheadline>Send an inquiry for pricing, volume availability, and timelines.</Subheadline>
+      </Hero>
+
+      <ContactForm>
+        <Fields>
+          <Field name="CompanyName" required="true"/>
+          <Field name="ContactPerson" required="true"/>
+          <Field name="Email" required="true"/>
+          <Field name="Phone" required="false"/>
+          <Field name="Country" required="true"/>
+          <Field name="QuantityRequested" required="true"/>
+          <Field name="Message" required="false"/>
+        </Fields>
+        <Submit>Send Inquiry</Submit>
+        <PrivacyNote>We use your contact information only to respond to your inquiry.</PrivacyNote>
+      </ContactForm>
+
+      <ContactDetails>
+        <Item label="WhatsApp">To be added</Item>
+        <Item label="Email">To be added</Item>
+        <Item label="Location">Ethiopia — South West Ethiopia, South Omo Zone, Menite Goldiya</Item>
+      </ContactDetails>
+    </Page>
+  </Pages>
+
+  <UIComponents>
+    <Component name="Header" base="shadcn/ui NavigationMenu"/>
+    <Component name="MobileMenu" base="shadcn/ui Sheet"/>
+    <Component name="Buttons" base="shadcn/ui Button"/>
+    <Component name="Cards" base="shadcn/ui Card"/>
+    <Component name="Tabs" base="shadcn/ui Tabs"/>
+    <Component name="Accordion" base="shadcn/ui Accordion"/>
+    <Component name="Forms" base="shadcn/ui Form + react-hook-form"/>
+    <Component name="Carousel" base="Custom (CSS transform)"/>
+    <Component name="Animations" base="Framer Motion"/>
+  </UIComponents>
+
+  <InteractionPatterns>
+    <Pattern id="IP-01" name="Sliding Underline Menu Hover">
+      <Description>Underline smoothly transitions to hovered menu item using accent color.</Description>
+    </Pattern>
+
+    <Pattern id="IP-02" name="MegaMenu Preview Panel">
+      <Description>Mega-menu includes a preview panel with key product/farm facts; no downloads.</Description>
+    </Pattern>
+
+    <Pattern id="IP-03" name="Infinite Carousel (Trust Signals)">
+      <Description>Slow infinite carousel with pause-on-hover; purely informational slides.</Description>
+    </Pattern>
+
+    <Pattern id="IP-04" name="Selective WebGL">
+      <Description>WebGL is loaded only on capable devices; falls back to HTML content.</Description>
+    </Pattern>
+
+    <Pattern id="IP-05" name="Scroll Reveal">
+      <Description>Cards and sections reveal with subtle motion on entry; consistent timing site-wide.</Description>
+    </Pattern>
+  </InteractionPatterns>
+
+  <Performance>
+    <Budgets>
+      <InitialJSKB>180</InitialJSKB>
+      <WebGLJSKB>250</WebGLJSKB>
+      <LargestContentfulPaintSeconds>2.5</LargestContentfulPaintSeconds>
+      <MobileFirst>true</MobileFirst>
+    </Budgets>
+    <Rules>
+      <Rule id="PERF-01">No full-screen WebGL background on mobile.</Rule>
+      <Rule id="PERF-02">Defer WebGL until after interaction or idle.</Rule>
+      <Rule id="PERF-03">Prefer CSS transforms for carousels and micro-interactions.</Rule>
+    </Rules>
+  </Performance>
+
+  <Accessibility>
+    <Requirements>
+      <Requirement id="A11Y-01">All interactive elements keyboard navigable.</Requirement>
+      <Requirement id="A11Y-02">Visible focus states in brand accent.</Requirement>
+      <Requirement id="A11Y-03">Reduced motion support (prefers-reduced-motion).</Requirement>
+      <Requirement id="A11Y-04">Sufficient color contrast for text and controls.</Requirement>
+    </Requirements>
+  </Accessibility>
+
+</ProjectWebsiteSpec>
