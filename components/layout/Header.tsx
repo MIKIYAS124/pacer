@@ -102,6 +102,13 @@ export function Header() {
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
+                                <NavigationMenuLink asChild>
+                                    <Link href="/about" className={navLinkClasses}>
+                                        About
+                                    </Link>
+                                </NavigationMenuLink>
+                            </NavigationMenuItem>
+                            <NavigationMenuItem>
                                 <NavigationMenuTrigger className={cn(navLinkClasses, "bg-transparent hover:bg-transparent data-[state=open]:bg-transparent")}>Products</NavigationMenuTrigger>
                                 <NavigationMenuContent>
                                     <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
@@ -159,13 +166,6 @@ export function Header() {
                             </NavigationMenuItem>
                             <NavigationMenuItem>
                                 <NavigationMenuLink asChild>
-                                    <Link href="/quality" className={navLinkClasses}>
-                                        Quality
-                                    </Link>
-                                </NavigationMenuLink>
-                            </NavigationMenuItem>
-                            <NavigationMenuItem>
-                                <NavigationMenuLink asChild>
                                     <Link href="/export" className={navLinkClasses}>
                                         Export
                                     </Link>
@@ -173,8 +173,8 @@ export function Header() {
                             </NavigationMenuItem>
                             <NavigationMenuItem>
                                 <NavigationMenuLink asChild>
-                                    <Link href="/about" className={navLinkClasses}>
-                                        About
+                                    <Link href="/news" className={navLinkClasses}>
+                                        News/Blog
                                     </Link>
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
@@ -226,11 +226,11 @@ export function Header() {
                                 <div className="px-4 space-y-1">
                                     {[
                                         { href: "/", label: "Home" },
+                                        { href: "/about", label: "About" },
                                         { href: "/products/organic-chia-seed", label: "Products" },
                                         { href: "/farm-traceability", label: "Farm & Traceability" },
-                                        { href: "/quality", label: "Quality" },
                                         { href: "/export", label: "Export" },
-                                        { href: "/about", label: "About" },
+                                        { href: "/news", label: "News/Blog" },
                                         { href: "/contact", label: "Contact" }
                                     ].map((item, i) => (
                                         <motion.div
